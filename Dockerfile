@@ -1,5 +1,5 @@
 # Jupyter Notebook with K3D
-# jupyter/minimal-notebook with ipywidgets, K3D, matplotlib, NumPy, SciPy.
+# The jupyter/minimal-notebook Docker image with ipywidgets, K3D, matplotlib, NumPy, SciPy.
 
 FROM jupyter/minimal-notebook:latest
 
@@ -9,12 +9,17 @@ MAINTAINER Ruslan Korniichuk <ruslan.korniichuk@gmail.com>
 USER jovyan
 
 # Install ipywidgets, matplotlib, NumPy, SciPy for Python 3
-RUN conda install --yes ipywidgets matplotlib numpy scipy && conda clean -yt
+RUN conda install --yes \
+    ipywidgets matplotlib numpy scipy \
+    && conda clean -yt
 
 # Install ipywidgets, matplotlib, NumPy, SciPy for Python 2
 RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
     ipython ipywidgets matplotlib numpy scipy \
     && conda clean -yt
+
+# Clone K3D repository
+RUN git clone https://github.com/K3D-tools/K3D-jupyter.git
 
 USER root
 
