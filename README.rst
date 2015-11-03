@@ -4,4 +4,4 @@
 Full description
 ================
 
-The jupyter/minimal-notebook Docker image with ipywidgets, K3D, matplotlib, NumPy, SciPy.
+The `jupyter/minimal-notebook <https://hub.docker.com/r/jupyter/minimal-notebook/>`_ Docker image with ipywidgets, K3D, matplotlib, NumPy, SciPy.
