@@ -18,13 +18,29 @@ RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
     ipython ipywidgets matplotlib numpy scipy \
     && conda clean -yt
 
+USER root
+
 # Clone K3D repository
 RUN git clone https://github.com/K3D-tools/K3D-jupyter.git
 
-USER root
+# Install npm for bower installation
+RUN apt-get install -y npm
+
+# Make an alias
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
+# Install bower for K3D installation
+RUN npm install -g bower
+
+# Install K3D
+RUN cd K3D-jupyter && bower install --allow-root --config.interactive=false \
+    && pip install .
 
 # Install Python 2 kernel spec globally to avoid permission problems when
 # NB_UID switching at runtime.
 RUN $CONDA_DIR/envs/python2/bin/python \
     $CONDA_DIR/envs/python2/bin/ipython \
     kernelspec install-self
+
+# Delete K3D-jupyter dir
+RUN rm -r /home/jovyan/work/K3D-jupyter
