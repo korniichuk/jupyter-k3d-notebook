@@ -15,7 +15,7 @@ RUN conda install --yes \
 
 # Install ipywidgets, matplotlib, NumPy, SciPy for Python 2
 RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
-    ipython ipywidgets matplotlib numpy scipy \
+    ipywidgets matplotlib numpy scipy \
     && conda clean -yt
 
 USER root
@@ -32,9 +32,12 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 # Install bower for K3D installation
 RUN npm install -g bower
 
-# Install K3D
+# Install K3D for Python 3
 RUN cd K3D-jupyter && bower install --allow-root --config.interactive=false \
     && pip install .
+
+# Install K3D for Python 2
+RUN cd K3D-jupyter && /opt/conda/envs/python2/bin/pip install .
 
 # Install Python 2 kernel spec globally to avoid permission problems when
 # NB_UID switching at runtime.
