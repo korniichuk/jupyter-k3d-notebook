@@ -47,5 +47,3 @@ RUN $CONDA_DIR/envs/python2/bin/python \
 
 # Delete K3D-jupyter dir
 RUN rm -r /home/jovyan/work/K3D-jupyter
-
-USER jovyan
