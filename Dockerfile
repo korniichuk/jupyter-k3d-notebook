@@ -1,4 +1,4 @@
-# Version: 0.1b1
+# Version: 0.1b2
 # Jupyter Notebook with K3D
 # The jupyter/minimal-notebook Docker image with ipywidgets, K3D, matplotlib,
 # NumPy, SciPy.
