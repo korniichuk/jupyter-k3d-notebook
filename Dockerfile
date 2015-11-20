@@ -47,5 +47,8 @@ RUN $CONDA_DIR/envs/python2/bin/python \
     $CONDA_DIR/envs/python2/bin/ipython \
     kernelspec install-self
 
+# Copy /home/jovyan/work/K3D-jupyter/examples dir to /home/jovyan/work dir
+RUN cp -a /home/jovyan/work/K3D-jupyter/examples /home/jovyan/work
+
 # Delete K3D-jupyter dir
 RUN rm -r /home/jovyan/work/K3D-jupyter
