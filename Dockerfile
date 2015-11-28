@@ -7,9 +7,6 @@ FROM korniichuk/jupyter-notebook:latest
 
 MAINTAINER Ruslan Korniichuk <ruslan.korniichuk@gmail.com>
 
-# Now switch to jovyan for all conda installs
-USER jovyan
-
 USER root
 
 # Clone K3D repository
