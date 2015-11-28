@@ -1,7 +1,7 @@
 # Name: korniichuk/jupyter-k3d-notebook
 # Short Description: Jupyter Notebook with K3D
 # Full Description: The korniichuk/jupyter-notebook Docker image with K3D.
-# Version: 0.1b3
+# Version: 0.1b4
 
 FROM korniichuk/jupyter-notebook:latest
 
@@ -10,7 +10,7 @@ MAINTAINER Ruslan Korniichuk <ruslan.korniichuk@gmail.com>
 USER root
 
 # Clone K3D repository
-ENV REFRESHED_AT 2015–11–27
+ENV REFRESHED_AT 2015–11–28
 RUN git clone https://github.com/K3D-tools/K3D-jupyter.git
 
 # Install K3D
