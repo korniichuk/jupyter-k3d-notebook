@@ -1,9 +1,10 @@
+# Name: korniichuk/jupyter-k3d-notebook
 # Version: 0.1b3
 # Jupyter Notebook with K3D
 # The jupyter/minimal-notebook Docker image with ipywidgets, K3D, matplotlib,
 # NumPy, SciPy.
 
-FROM jupyter/minimal-notebook:latest
+FROM korniichuk/jupyter-notebook:latest
 
 MAINTAINER Ruslan Korniichuk <ruslan.korniichuk@gmail.com>
 
