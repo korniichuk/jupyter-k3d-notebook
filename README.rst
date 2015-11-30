@@ -3,12 +3,10 @@
 
 Full description
 ================
-
 The `korniichuk/jupyter-notebook <https://hub.docker.com/r/korniichuk/jupyter-notebook/>`_ Docker image with K3D.
 
 Docker Hub
 ==========
-
 The `korniichuk/jupyter-k3d-notebook <https://hub.docker.com/r/korniichuk/jupyter-k3d-notebook/>`_ repo.
 
 Quickstart
@@ -29,7 +27,6 @@ Own try.jupyter.org
 
 User guide
 ==========
-
 Users
 -----
 You can start a container with ``root`` user::
