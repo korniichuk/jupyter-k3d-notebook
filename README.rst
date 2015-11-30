@@ -1,5 +1,5 @@
 .. contents:: Table of contents
-   :depth: 2
+   :depth: 3
 
 Full description
 ================
