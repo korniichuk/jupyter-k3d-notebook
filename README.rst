@@ -26,3 +26,19 @@ Own try.jupyter.org
     $ docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN -v /var/run/docker.sock:/docker.sock jupyter/tmpnb python orchestrate.py --image='korniichuk/jupyter-k3d-notebook' --command="ipython notebook --NotebookApp.base_url={base_path} --ip=0.0.0.0 --port {port}"
 
 **Second**, visit your host on port 8000.
+
+User guide
+==========
+Users
+-----
+You can start a container with ``root`` user::
+
+    $ docker run -u root -d -p 8888:8888 korniichuk/jupyter-k3d-notebook
+
+or::
+
+    $ docker run --user root -d -p 8888:8888 korniichuk/jupyter-k3d-notebook
+
+Where:
+
+ * ``-u`` or ``--user`` -- username or UID (format: <name|uid>[:<group|gid>]).
