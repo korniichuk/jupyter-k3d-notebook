@@ -30,7 +30,18 @@ or::
 
 Where:
 
- * ``-u`` or ``--user`` -- username or UID (format: <name|uid>[:<group|gid>]).
+* ``-u`` or ``--user`` -- username or UID (format: <name|uid>[:<group|gid>]).
+
+Interactive processes
+---------------------
+For interactive processes (like a shell), you must use ``-i -t`` together in order to allocate a tty for the container process. ``-i -t`` is often written ``-it``::
+
+    $ docker run -it -p 8888:8888 korniichuk/jupyter-k3d-notebook bash
+
+Where:
+
+* ``-i`` or ``--interactive`` -- keep STDIN open even if not attached,
+* ``-t`` or ``--tty`` -- allocate a pseudo-TTY.
 
 Own try.jupyter.org
 ===================
