@@ -19,7 +19,6 @@ User guide
 ==========
 Users
 -----
-
 You can start a container with ``root`` user::
 
     $ docker run -u root -d -p 8888:8888 korniichuk/jupyter-k3d-notebook
