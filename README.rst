@@ -1,5 +1,5 @@
 .. contents:: Table of contents
-   :depth: 3
+   :depth: 2
 
 Full description
 ================
@@ -27,7 +27,6 @@ Own try.jupyter.org
 
 User guide
 ==========
-
 Users
 -----
 
@@ -42,3 +41,7 @@ or::
 Where:
 
  * ``-u`` or ``--user`` -- username or UID (format: <name|uid>[:<group|gid>]).
+
+Users2
+------
+ABC
