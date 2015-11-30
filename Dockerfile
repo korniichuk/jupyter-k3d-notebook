@@ -26,3 +26,5 @@ RUN chown -R jovyan /home/jovyan/work/examples
 
 # Delete K3D-jupyter dir
 RUN rm -r /home/jovyan/work/K3D-jupyter
+
+USER jovyan
