@@ -1,5 +1,5 @@
 .. contents:: Table of contents
-   :depth: 3
+   :depth: 2
 
 Full description
 ================
@@ -29,6 +29,7 @@ Own try.jupyter.org
 
 User guide
 ==========
+
 Users
 -----
 You can start a container with ``root`` user::
