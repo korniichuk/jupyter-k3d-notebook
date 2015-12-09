@@ -22,20 +22,39 @@ Detached
 To start a container in detached mode, you use ``-d`` or ``--detach`` option. By design, containers started in detached mode exit when the root process used to run the container exits. A container in detached mode cannot be automatically removed when it stops, this means you cannot use the ``--rm`` option with ``-d`` option.
 ::
 
+    $ docker run -d -p HOST_PORT:CONTAINER_PORT IMAGE
     $ docker run -d -p 8888:8888 korniichuk/jupyter-k3d-notebook
 
 or::
 
+    $ docker run --detach -p HOST_PORT:CONTAINER_PORT IMAGE
     $ docker run --detach -p 8888:8888 korniichuk/jupyter-k3d-notebook
 
 Where:
 
 * ``-d`` or ``--detach`` -- run container in background and print container ID.
 
+Ports
+-----
+We can also bind Docker containers to specific ports using the ``-p`` or ``--publish`` option, for example::
+
+    $ docker run -d -p HOST_PORT:CONTAINER_PORT IMAGE
+    $ docker run -d -p 8888:8888 korniichuk/jupyter-k3d-notebook
+
+or::
+
+    $ docker run -d --publish HOST_PORT:CONTAINER_PORT IMAGE
+    $ docker run -d --publish 8888:8888 korniichuk/jupyter-k3d-notebook
+
+Where:
+
+* ``-p`` or ``--publish`` -- publish a container's port(s) to the host.
+
 Interactive processes
 ---------------------
 For interactive processes (like a shell), you must use ``-i -t`` together in order to allocate a tty for the container process. ``-i -t`` is often written ``-it``::
 
+    $ docker run -it IMAGE COMMAND
     $ docker run -it korniichuk/jupyter-k3d-notebook bash
 
 Where:
