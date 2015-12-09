@@ -1,7 +1,7 @@
 # Name: korniichuk/jupyter-k3d-notebook
 # Short Description: Jupyter Notebook with K3D
 # Full Description: The korniichuk/jupyter-notebook Docker image with K3D.
-# Version: 0.1b4
+# Version: 0.1b5
 
 FROM korniichuk/jupyter-notebook:latest
 
