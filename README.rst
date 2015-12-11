@@ -50,6 +50,22 @@ Where:
 
 * ``-p`` or ``--publish`` -- publish a container's port(s) to the host.
 
+Users
+-----
+You can start a container with ``root`` user by passing the ``-u`` option::
+
+    $ docker run -d -p HOST_PORT:CONTAINER_PORT -u USERNAME IMAGE
+    $ docker run -d -p 8888:8888 -u root korniichuk/jupyter-k3d-notebook
+
+or::
+
+    $ docker run -d -p HOST_PORT:CONTAINER_PORT --user USERNAME IMAGE
+    $ docker run -d -p 8888:8888 --user root korniichuk/jupyter-k3d-notebook
+
+Where:
+ 
+* ``-u`` or ``--user`` -- username or UID (format: <name|uid>[:<group|gid>]).
+
 Interactive processes
 ---------------------
 For interactive processes (like a shell), you must use ``-i -t`` together in order to allocate a tty for the container process. ``-i -t`` is often written ``-it``::
